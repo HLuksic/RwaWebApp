@@ -1,0 +1,19 @@
+<table>
+    <tr><th>ID</th><td>{{ film?.id }}</td></tr>
+    <tr><th>TMDB ID</th><td>{{ film?.tmdb_id }}</td></tr>
+    <tr><th>Jezik</th><td>{{ film?.jezik }}</td></tr>
+    <tr><th>Naslov</th><td>{{ film?.naslov }}</td></tr>
+    <tr><th>Izvorni naslov</th><td>{{ film?.izvorni_naslov }}</td></tr>
+    <tr><th>Opis</th><td>{{ film?.opis }}</td></tr>
+    <tr><th>Poster</th><td><img src='{{ posterUrl + film?.poster_url }}' width='100' alt='slika_{{ film?.naslov }}'></td></tr>
+    <tr><th>Vrijeme trajanja</th><td>{{ film?.vrijeme_trajanja }}</td></tr>
+    <tr><th>Budzet</th><td>{{ film?.budzet }}</td></tr>
+    <tr><th>Prihod</th><td>{{ film?.prihod }}</td></tr>
+    <tr><th>Status</th><td>{{ film?.status }}</td></tr>
+    <tr><th>Tagovi</th><td>{{ film?.tagline }}</td></tr>
+    <tr><th>Ocjena</th><td>{{ film?.ocjena }}</td></tr>
+    <tr><th>Broj glasova</th><td>{{ film?.broj_ocjena }}</td></tr>
+    <tr><th>Popularnost</th><td>{{ film?.popularnost }}</td></tr>
+    <tr><th>Datum dodavanja</th><td>{{ film?.datum_dodavanja }}</td></tr>
+    <tr><th>Dodao ID</th><td>{{ film?.dodao }}</td></tr>
+</table>

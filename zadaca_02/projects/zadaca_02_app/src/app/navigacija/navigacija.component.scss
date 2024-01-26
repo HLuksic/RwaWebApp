@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #212121;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+
+    .link {
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 1em 1em;
+        text-decoration: none;
+        color: white;
+        background-color: transparent;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        &:hover {
+            background-color: rgb(117, 117, 210);
+        }
+    }
+}
+

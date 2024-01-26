@@ -1,0 +1,11 @@
+<header>
+    <h1>Filmoteka</h1>
+</header>
+<nav>
+    <a href="#popis" (click)="putanja='popis'">Popis filmova</a><br>
+    <a href="#detalji" (click)="putanja='detalji'">Detalji filma</a>
+</nav>
+<main>
+    <app-popis-filmova *ngIf="putanja=='popis'"></app-popis-filmova>
+</main>
+<footer>Hrvoje Lukšić &copy; 2022</footer>

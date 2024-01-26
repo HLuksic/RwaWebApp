@@ -1,0 +1,11 @@
+<ul>
+    <li *ngFor="let film of filmovi" (mouseover)="dajOpis(film.naziv)" (mouseout)="makniOpis()">
+        {{film.naziv}}
+        <p *ngIf="film.naziv == nazivFilma">
+            {{film.opis}}
+        </p>
+        <a href="#detalji" (click)="putanja='detalji'">Detalji filma</a>
+        <!-- <p [hidden]="film.naziv != nazivFilma">
+            {{film.opis}} -->
+    </li>
+</ul>

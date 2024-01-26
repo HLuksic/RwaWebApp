@@ -1,0 +1,9 @@
+<h1 class="naslov">Popis žanrova</h1>
+<ul class="popisZanrova" *ngFor="let zanr of zanrovi">
+    <li class="zanr">
+        {{zanr.naziv}}
+        <ul class="popisFilmova" *ngFor="let film of zanr.dva_filma">
+            <li class="naslovFilma"> {{film.naslov}} </li>
+        </ul>
+    </li>
+</ul>

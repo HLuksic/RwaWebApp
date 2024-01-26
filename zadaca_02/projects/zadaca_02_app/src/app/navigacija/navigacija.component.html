@@ -1,0 +1,15 @@
+<p>
+    <a class="link" (click)="promijeniNaslov('Početna'); dajUlogu();" href="#pocetna">Početna</a>
+    <a class="link" (click)="promijeniNaslov('Dokumentacija'); dajUlogu();" href="#dokumentacija">Dokumentacija</a>
+    <a *ngIf="this.korisnikUloga == 2 || this.korisnikUloga == 1" class="link" (click)="promijeniNaslov('Pretraživanje filmova'); dajUlogu();" href="#filmoviPretrazivanje">Pretraživanje filmova</a>
+    <a *ngIf="this.korisnikUloga == 2 || this.korisnikUloga == 1" class="link" (click)="promijeniNaslov('Pregled filmova'); dajUlogu();" href="#filmoviPregled">Pregled filmova</a>
+    <a *ngIf="this.korisnikUloga == 1" class="link" (click)="promijeniNaslov('Prijedlozi filmova'); dajUlogu();" href="#filmoviPrijedlozi">Prijedlozi filmova</a>
+</p>
+<p>
+    <a *ngIf="this.korisnikUloga == 1" class="link" (click)="promijeniNaslov('Žanrovi'); dajUlogu();" href="#zanrovi">Žanrovi</a>
+    <a *ngIf="this.korisnikUloga == 1" class="link" (click)="promijeniNaslov('Korisnici'); dajUlogu();" href="#korisnici">Korisnici</a>
+    <a *ngIf="this.korisnikUloga == 2 || this.korisnikUloga == 1" class="link" (click)="promijeniNaslov('Profil'); dajUlogu();" href="#profil">Profil</a>
+    <a class="link" (click)="promijeniNaslov('Registracija'); dajUlogu();" href="#registracija">Registracija</a>
+    <a *ngIf="this.korisnikUloga == 3" class="link" (click)="promijeniNaslov('Prijava'); dajUlogu();" href="#prijava">Prijava</a>
+    <a *ngIf="this.korisnikUloga == 2 || this.korisnikUloga == 1" class="link" (click)="odjaviKorisnika(); dajUlogu();" href="#odjava">Odjava</a>
+</p>

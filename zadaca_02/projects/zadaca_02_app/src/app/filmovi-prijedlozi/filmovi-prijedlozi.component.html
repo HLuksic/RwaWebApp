@@ -1,0 +1,26 @@
+<p class="greska" *ngIf="status != 200">Greška u dohvatu filmova!</p>
+
+<p class="greska" *ngIf="status == 200 && filmovi.length == 0">Nema predloženih filmova!</p>
+
+<!--create paging with number of total pages and left and right buttons-->
+<!-- <p *ngIf="dajFilmove(1) != null && filmovi.length != 0">
+    <button (click)="dajFilmove(1)"><<</button>
+    <button (click)="dajFilmove(trenutnaStranica - 1)"><</button>
+    {{trenutnaStranica}} od {{ukupnoStranica}}
+    <button (click)="dajFilmove(trenutnaStranica + 1)">></button>
+    <button (click)="dajFilmove(ukupnoStranica)">>></button>
+</p> -->
+
+<table *ngIf="status == 200 && filmovi.length != 0">
+    <tr><th>ID</th><th>Jezik</th><th>Izvorni naslov</th><th>Naslov</th><th>Opis</th><th>Poster</th><th>Datum dodavanja</th></tr>
+    <tr *ngFor="let film of filmovi">
+        <td>{{film.id}}</td>
+        <td>{{film.jezik}}</td>
+        <td>{{film.izvorni_naslov}}</td>
+        <td>{{film.naslov}}</td>
+        <td>{{film.opis}}</td>
+        <td><img src="{{ posterUrl + film.poster_url }}" width="100px" alt='slika_{{ film.naslov }}'></td>
+        <td>{{film.datum_dodavanja}}</td>
+        <td><button (click)="odobri(film);">Odobri</button></td>
+        <td><button (click)="brisi(film.id); dajFilmove(1);">Izbriši</button></td>
+</table>

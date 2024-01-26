@@ -1,0 +1,21 @@
+<form action="{{ url }}/registracija" method="POST" onsubmit="return validacija(this); salji()">
+    <label for="ime">Ime</label>
+    <input type="text" name="ime" id="ime" />
+    <br>
+    <label for="prezime">Prezime</label>
+    <input type="text" name="prezime" id="prezime" />
+    <br>
+    <label for="datum">Datum rođenja</label>
+    <input type="date" name="datum" id="datum" />
+    <br>
+    <label for="email">*E-mail</label>
+    <input type="email" name="email" id="email" />
+    <br>
+    <label for="korime">*Korisničko ime</label>
+    <input type="text" name="korime" id="korime" />
+    <br>
+    <label for="lozinka">*Lozinka</label>
+    <input type="password" name="lozinka" id="lozinka" />
+    <br>
+    <input type="submit" value="Registriraj se" />
+</form>

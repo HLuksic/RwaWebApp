@@ -1,0 +1,25 @@
+<header>
+    {{ title }}
+</header>
+
+<nav>
+    <app-navigacija></app-navigacija>
+</nav>
+
+<main>
+    <app-pocetna *ngIf="title == 'Početna'"></app-pocetna>
+    <app-dokumentacija *ngIf="title == 'Dokumentacija'"></app-dokumentacija>
+    <app-filmovi-pregled *ngIf="title == 'Pregled filmova'"></app-filmovi-pregled>
+    <app-filmovi-pretrazivanje *ngIf="title == 'Pretraživanje filmova'"></app-filmovi-pretrazivanje>
+    <app-filmovi-prijedlozi *ngIf="title == 'Prijedlozi filmova'"></app-filmovi-prijedlozi>
+    <app-korisnici *ngIf="title == 'Korisnici'"></app-korisnici>
+    <app-zanrovi *ngIf="title == 'Žanrovi'"></app-zanrovi>
+    <app-film *ngIf="title == 'Film'"></app-film>
+    <app-profil *ngIf="title == 'Profil'"></app-profil>
+    <app-registracija *ngIf="title == 'Registracija'"></app-registracija>
+    <app-prijava *ngIf="title == 'Prijava'"></app-prijava>
+</main>
+
+<footer>
+    <app-podnozje></app-podnozje>
+</footer>

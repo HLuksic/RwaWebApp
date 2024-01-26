@@ -1,0 +1,18 @@
+<input class="pretraga" type="text" placeholder="Ključne riječi naslova" (keyup)="dajFilter($event); dajFilmove(1)"><br>
+
+<p class="greska" *ngIf="status != 200">Greška u dohvatu filmova!</p>
+
+<p class="greska" *ngIf="status == 200 && filmovi.length == 0">Nema filmova koji zadovoljavaju kriterij!</p>
+
+<table *ngIf="status == 200 && filmovi.length != 0">
+    <tr><th>ID</th><th>Jezik</th><th>Izvorni naslov</th><th>Naslov</th><th>Opis</th><th>Poster</th><th>Datum dodavanja</th></tr>
+    <tr *ngFor="let film of filmovi">
+        <td>{{ film.id }}</td>
+        <td>{{ film.jezik }}</td>
+        <td><a class="link" (click)="detaljiFilma(film)">{{ film.izvorni_naslov }}</a></td>
+        <td>{{ film.naslov }}</td>
+        <td>{{ film.opis }}</td>
+        <td><img src="{{ posterUrl + film.poster_url }}" width="100px" alt='slika_{{ film.naslov }}'></td>
+        <td>{{ film.datum_dodavanja }}</td>
+    </tr>
+</table>

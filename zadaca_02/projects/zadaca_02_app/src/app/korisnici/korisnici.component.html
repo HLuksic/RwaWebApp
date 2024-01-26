@@ -1,0 +1,26 @@
+<p class="greska" *ngIf="status != 200">Greška u dohvatu korisnika!</p>
+
+<p class="greska" *ngIf="status == 200 && korisnici.length == 0">Nema korisnika!</p>
+
+<!--create paging with number of total pages and left and right buttons-->
+<!-- <p *ngIf="dajFilmove(1) != null && filmovi.length != 0">
+    <button (click)="dajFilmove(1)"><<</button>
+    <button (click)="dajFilmove(trenutnaStranica - 1)"><</button>
+    {{trenutnaStranica}} od {{ukupnoStranica}}
+    <button (click)="dajFilmove(trenutnaStranica + 1)">></button>
+    <button (click)="dajFilmove(ukupnoStranica)">>></button>
+</p> -->
+
+<table *ngIf="status == 200 && korisnici.length != 0">
+    <tr><th>ID</th><th>Ime</th><th>Prezime</th><th>Korisničko ime</th><th>E-mail</th><th>Datum rođenja</th><th>Uloga</th></tr>
+    <tr *ngFor="let korisnik of korisnici">
+        <td>{{ korisnik.id }}</td>
+        <td *ngIf="korisnik.ime != null">{{ korisnik.ime }}</td>
+        <td *ngIf="korisnik.prezime != null">{{ korisnik.prezime }}</td>
+        <td>{{ korisnik.korime }}</td>
+        <td>{{ korisnik.email }}</td>
+        <td>{{ korisnik.datum_rodenja }}</td>
+        <td *ngIf="korisnik.uloga == 3">Neaktiviran</td>
+        <td *ngIf="korisnik.uloga == 2">Korisnik</td>
+        <td *ngIf="korisnik.uloga == 1">Admin</td>
+</table>

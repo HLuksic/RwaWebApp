@@ -1,0 +1,31 @@
+port=12249
+server="spider.foi.hr"
+echo "GET"
+curl -X GET "http://spider.foi.hr:12249/api/korisnici/"
+echo ""
+echo "POST"
+curl -X POST "http://spider.foi.hr:12249/api/korisnici/" -H 'Content-Type: application/json' -d '{"ime":"Test", "prezime":"Test", "lozinka":"123456", "email":"test3@foi.unizg.hr", "korime":"test"}'
+echo ""
+echo "DELETE"
+curl -X DELETE "http://spider.foi.hr:12249/api/korisnici/"
+echo ""
+echo "PUT"
+curl -X PUT "http://spider.foi.hr:12249/api/korisnici/"
+echo ""
+echo "GET"
+curl -X GET "http://spider.foi.hr:12249/api/korisnici/pkos"
+echo ""
+echo "GET prijava tocna"
+curl -X POST "http://spider.foi.hr:12249/api/korisnici/pkos/prijava" -H 'Content-Type: application/json' -d '{"lozinka":"123456"}'
+echo ""
+echo "GET prijava kriva"
+curl -X POST "http://spider.foi.hr:12249/api/korisnici/pkos/prijava" -H 'Content-Type: application/json' -d '{"lozinka":"12345"}'
+echo ""
+echo "PUT"
+curl -X PUT "http://spider.foi.hr:12249/api/korisnici/pkos" -H 'Content-Type: application/json' -d '{"ime":"Test2", "prezime":"Test", "lozinka":"123456", "email":"test2@foi.unizg.hr"}'
+echo ""
+echo "DELETE"
+curl -X DELETE "http://spider.foi.hr:12249/api/korisnici/test"
+echo ""
+echo "POST"
+curl -X POST "http://spider.foi.hr:12249/api/korisnici/test"

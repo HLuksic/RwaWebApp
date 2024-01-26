@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "sqlite3": "https://github.com/mapbox/node-sqlite3/tarball/master"
+  }
+}

@@ -1,0 +1,22 @@
+<p class="greska" *ngIf="status != 200">Greška u dohvatu žanrova!</p>
+
+<p class="greska" *ngIf="status == 200 && zanrovi.length == 0">Nema žanrova!</p>
+
+<!--create paging with number of total pages and left and right buttons-->
+<!-- <p *ngIf="dajFilmove(1) != null && filmovi.length != 0">
+    <button (click)="dajFilmove(1)"><<</button>
+    <button (click)="dajFilmove(trenutnaStranica - 1)"><</button>
+    {{trenutnaStranica}} od {{ukupnoStranica}}
+    <button (click)="dajFilmove(trenutnaStranica + 1)">></button>
+    <button (click)="dajFilmove(ukupnoStranica)">>></button>
+</p> -->
+
+<div class="gumb"><button (click)="dodajSve();">Dodaj sve iz TMDB-a</button></div>
+
+<table *ngIf="status == 200 && zanrovi.length != 0">
+    <tr><th>ID</th><th>TMDB ID</th><th>Naziv</th></tr>
+    <tr *ngFor="let zanr of zanrovi">
+        <td>{{zanr.id}}</td>
+        <td>{{zanr.tmdb_id}}</td>
+        <td>{{zanr.naziv}}</td>
+</table>

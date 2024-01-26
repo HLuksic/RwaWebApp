@@ -1,0 +1,23 @@
+<p class="greska" *ngIf="status != 200 || this.korisnik == undefined">Greška u dohvatu profila!</p>
+
+<form>
+    <label for='ime'>Ime</label>
+    <input type='text' name='ime' id='ime' [value]="korisnik?.ime" disabled/>
+    <br>
+    <label for='prezime'>Prezime</label>
+    <input type='text' name='prezime' id='prezime' [value]="korisnik?.prezime" disabled />
+    <br>
+    <label for='datum'>Datum rođenja</label>
+    <input type='date' name='datum' id='datum' [value]="korisnik?.datum_rodenja" disabled />
+    <br>
+    <label for='email'>E-mail</label>
+    <input type='email' name='email' id='email' [value]="korisnik?.email" disabled/>
+    <br>
+    <label for='korime'>Korisničko ime</label>
+    <input type='text' name='korime' id='korime' [value]="korisnik?.korime" disabled/>
+    <br>
+    <label for='uloga'>Uloga</label>
+    <input type='text' name='uloga' id='uloga' [value]="korisnik?.uloga == 1 ? 'Admin' : 'Korisnik'" disabled/>
+    <br>
+    <input type='submit' value='Podnesi promjene' />
+</form>
